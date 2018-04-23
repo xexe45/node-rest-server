@@ -1,0 +1,4 @@
+# REST SERVER
+```
+npm install
+```

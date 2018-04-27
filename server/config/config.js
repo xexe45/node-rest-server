@@ -40,3 +40,8 @@ process.env.URLDB = urlDB;
     heroku config:unset nombre
     heroku config:set nombre="Fernando
  */
+
+//==================================
+// GOOGLE CLIENTE ID
+//===================================
+process.env.CLIENT_ID = process.env.CLIENT_ID || '330674308169-noflui046tqe1tbact8qij91np864pea.apps.googleusercontent.com';

@@ -8,6 +8,19 @@ process.env.PORT = process.env.PORT || 3000;
 //===================================
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
+
+//==================================
+// Vencimiento del token
+//===================================
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 30;
+
+
+//==================================
+// SEED de autenticación
+//===================================
+
+process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
+
 //==================================
 // BD
 //===================================
@@ -20,3 +33,10 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 process.env.URLDB = urlDB;
+/**
+ *  heroku config:set MONGO_URI="XXXXXXX"
+ 
+    heroku config:get nombre
+    heroku config:unset nombre
+    heroku config:set nombre="Fernando
+ */

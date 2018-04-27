@@ -14,17 +14,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-//declaracion rutas
-var appInitRoute = require('./routes/app');
-var userRoutes = require('./routes/usuario');
+//configuración global de rutas
+app.use(require('./routes/index'));
 
 mongoose.connect(process.env.URLDB, (err, res) => {
     if (err) throw err;
     console.log('Base de datos online')
 });
-
-app.use('/usuario', userRoutes);
-app.use('/', appInitRoute);
 
 app.listen(process.env.PORT, () => {
     console.log('Esuchando puerto: ' + 3000)
